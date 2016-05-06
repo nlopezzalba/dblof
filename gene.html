@@ -31,14 +31,14 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 NoPadding">
                     <div class="input-group Search">
                         <input type="text" class="form-control Search-input">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle Search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
+                        <div class="input-group-btn dropdown">
+                            <button type="button" class="dropdown-toggle Search-dropdown" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-right Search-dropdownMenu">
-                                <li><a href="#">All</a></li>
-                                <li><a href="#">Gene</a></li>
-                                <li><a href="#">Variant</a></li>
+                            <ul class="dropdown-menu Search-dropdownMenu" aria-labelleddby="searchType">
+                                <li><a href="#" data-value="all">All</a></li>
+                                <li><a href="#" data-value="gene">Gene</a></li>
+                                <li><a href="#" data-value="variant">Variant</a></li>
                             </ul>
                         </div>
                         <span class="input-group-btn">
@@ -53,11 +53,11 @@
 
         <div class="Container">
             <div class="row NoMargin fsi-row-lg-level fsi-row-md-level">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 NoPadding">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 NoPadding">
                     <h2 class="Title">Gene: PCSK9</h2>
-                    <h4 class="Italic Color--mediumGray">Proprotein convertase subtilisin/kexin type 9</h4>
+                    <h4 class="Title-description">Proprotein convertase subtilisin/kexin type 9</h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Box Box-noMargin">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Box Box-noMargin">
                     <div class="row">
                         <h4 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Subtitle">Obs/Exp
                             <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="Brief explanation of this item. Brief explanation of this item."></span>
@@ -93,8 +93,8 @@
                 </div>
             </div>
 
-            <div class="row fsi-row-lg-level fsi-row-md-level">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Box">
+            <div class="row NoMargin fsi-row-lg-level fsi-row-md-level">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Box Box--firstCol">
                     <h4 class="Subtitle">Age distribution
                         <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="Brief explanation of this item. Brief explanation of this item."></span>
                     </h4>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 Box">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Box Box--lastCol">
                     <h4 class="Subtitle">Population distribution
                         <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="Brief explanation of this item. Brief explanation of this item."></span>
                     </h4>
@@ -118,44 +118,49 @@
                 </div>
             </div>
 
-            <div class="row NoMargin">
+            <div class="row Tab">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <ul class="row nav nav-tabs" role="tablist">
-                        <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 NoPadding Tab active">
+                    <ul class="row nav nav-tabs" role="tablist">
+                        <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 NoPadding Tab-list active">
                             <a href="#GeneInfo" role="tab" data-toggle="tab">
                                 <h3 class="Subtitle">Gene Information</h3>
                             </a>
                         </li>
-                        <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 NoPadding Tab Tab--last">
+                        <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 NoPadding Tab-list Tab--last">
                             <a href="#VariantInfo" role="tab" data-toggle="tab">
                                 <h3 class="Subtitle">Variant Information</h3>
                             </a>
                         </li>
-                      </ul>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Tab-panes">
-                      <div class="tab-content">
+                    </ul>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Tab-panes">
+                    <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="GeneInfo">
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 NoPadding">
-                                <h4 class="Subtitle">About PCSK9</h4>
-                                <hr class="Line Line--strong">
-                                <p>Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open.<br>
-                                    Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene.
-                                </p>
+                            <div class="row NoMargin">
+                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                    <h4 class="Subtitle">About PCSK9</h4>
+                                    <hr class="Line Line--strong">
+                                    <p>Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open.<br>
+                                        Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <h4 class="Subtitle">Knockout phenotype</h4>
-                                <hr class="Line Line--strong">
-                                <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
-                                    One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <h4 class="Subtitle">Knockout phenotype</h4>
-                                <hr class="Line Line--strong">
-                                <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
-                                    One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
-                                </p>
+
+                            <div class="row NoMargin">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <h4 class="Subtitle">Knockout phenotype</h4>
+                                    <hr class="Line Line--strong">
+                                    <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
+                                        One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <h4 class="Subtitle">Knockout phenotype</h4>
+                                    <hr class="Line Line--strong">
+                                    <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
+                                        One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="VariantInfo">
@@ -172,28 +177,29 @@
                                         <input id="filterLoF" type="radio" class="InputRadio" name="filter">
                                         <label for="filterLoF" class="InputRadio-label">LoF</label>
                                     </div>
-                                <a href="" class="Button Button--orange Float--right">Export table to CSV</a>
+                                    <a href="" class="Button Button--orange Float--right">Export table to CSV</a>
                                 </div>
                             </div>
 
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <footer class="Footer">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 Float--right">
+                    <div class="Footer-logo Footer-dbLoFLogo"></div>
+                    <div class="Footer-logo Footer-broadLogo"></div>
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
+                    <h5 class="Footer-text">Copyright © 2016 Broad Institute. All Rights Reserved.<a href="" class="Color--blue"> Privacy Policy.</a><a href="" class="Color--blue"> Terms & Conditions</a></h5>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <footer class="Footer">
-        <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 Float--right">
-                <div class="Footer-logo Footer-dbLoFLogo"></div>
-                <div class="Footer-logo Footer-broadLogo"></div>
-            </div>
-            <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
-                <h5 class="Footer-text">Copyright © 2016 Broad Institute. All Rights Reserved.<a href="" class="Color--blue"> Privacy Policy.</a><a href="" class="Color--blue"> Terms & Conditions</a></h5>
-            </div>
-        </div>
-    </footer>
 
     <!-- <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='Bold'>Variant:</span> <a href='' class='Color--blue'>lalala</a><br><span class='Bold'>Consequence:</span> lalala<br>"></span> -->
 
@@ -201,14 +207,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        })
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 
-        $('#myTabs a').click(function (e) {
-          e.preventDefault()
-          $(this).tab('show')
-        })
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+    $(".dropdown-menu li a").click(function(){
+        $(this).parents(".dropdown").find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+        $(this).parents(".dropdown").find('.dropdown-toggle').val($(this).data('value'));
+    });
     </script>
 </body>
 </html>

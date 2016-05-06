@@ -27,18 +27,17 @@
             <a class="Header-logo" href="index.html"></a>
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-                    <h1 class="MainTitle">SEARCH GENE/VARIANT</h1>
-                    <!-- <h1 class="MainTitle">LOSS-OF-FUNCTION<br> VARIANTS DATABASE</h1> -->
+                    <h1 class="MainTitle">LOSS-OF-FUNCTION VARIANTS DATABASE</h1>
                     <div class="input-group Search Search--moreMargin">
                         <input type="text" class="form-control Search-input">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle Search-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
+                        <div class="input-group-btn dropdown">
+                            <button type="button" class="dropdown-toggle Search-dropdown" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-right Search-dropdownMenu">
-                                <li><a href="#">All</a></li>
-                                <li><a href="#">Gene</a></li>
-                                <li><a href="#">Variant</a></li>
+                            <ul class="dropdown-menu Search-dropdownMenu" aria-labelleddby="searchType">
+                                <li><a href="#" data-value="all">All</a></li>
+                                <li><a href="#" data-value="gene">Gene</a></li>
+                                <li><a href="#" data-value="variant">Variant</a></li>
                             </ul>
                         </div>
                         <span class="input-group-btn">
@@ -46,7 +45,7 @@
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </span>
-                        <p class="Search-examples">Examples - Gene: <a href="" class="Color--lightBlue">PCSK9</a> - Variant: <a href="" class="Color--lightBlue">22-46615880-T-C</a></p>
+                        <p class="Search-examples">Examples - Gene: <a href="gene.html" class="Color--lightBlue">PCSK9</a> - Variant: <a href="" class="Color--lightBlue">22-46615880-T-C</a></p>
                     </div>
                 </div>
             </div>
@@ -95,5 +94,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(".dropdown-menu li a").click(function(){
+          $(this).parents(".dropdown").find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
+          $(this).parents(".dropdown").find('.dropdown-toggle').val($(this).data('value'));
+        });
+    </script>
 </body>
 </html>

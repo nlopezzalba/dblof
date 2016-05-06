@@ -85,17 +85,17 @@ a:hover{
 .Header{
   background-color: #343A41;
   width: 100%;
-  padding: 0 80px;
+  padding: 0 80px 20px 80px;
   z-index: 3;
   border-bottom: 3px solid #24AFB2;
 }
 
 @media only screen and (max-width: 1024px) {
-  .Header { padding: 0 25px;}
+  .Header { padding: 0 25px 20px 25px;}
 }
 
 .Header-logo{
-  margin: 30px 0 20px 0;
+  margin: 30px 0 0 0;
   background-image: url('../images/dbLoF-white-logo.svg');
   width: 192px;
   height: 50px;
@@ -108,11 +108,11 @@ a:hover{
 }
 
 .Search--moreMargin{
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .Search-input{
-  font-size: 14px;
+  font-size: 1rem;
   color: #343A41;
   height: 40px;
   border-radius: 0;
@@ -130,11 +130,14 @@ a:hover{
   border: none;
   border-left: 1px solid #D2D4D8 !important;
   height: 40px;
-  width: 80px;
+  width: 100px;
   color: #343A41 !important;
   text-align: left;
+  font-size: 1rem;
+  padding-left: 12px;
 }
 
+.Search-dropdown,
 .Search-dropdown:focus,
 .Search-dropdown:hover{
     background-color: #ffffff !important;
@@ -149,7 +152,7 @@ a:hover{
 .Search-dropdownMenu{
   border-radius: 0;
   padding: 0 !important;
-  min-width: 80px;
+  min-width: 100px;
 }
 
 .Search-dropdownMenu li a{
@@ -175,7 +178,11 @@ a:hover{
   border-radius: 0;
 }
 
-.Search-button:hover{
+.Search-button:hover,
+.Search-button:focus,
+.Search-button:active{
+  border-radius: 0 !important;
+  outline: none;
   background-color: #E67E23;
 }
 
@@ -194,11 +201,28 @@ a:hover{
 .MainTitle{
   color: #ffffff;
   text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+.MainTitle--other{
+  color: #ffffff;
+  text-align: center;
   margin-top: 50px;
 }
 
 .Title{
-  padding: 25px 0 10px 0;
+  padding: 40px 0 10px 0;
+}
+
+.Title-description{
+  color: #5C636B;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 992px) {
+  .Title { padding: 10px 0 10px 0;}
+  .Title-description { padding-bottom: 10px;}
 }
 
 .Subtitle{
@@ -214,7 +238,7 @@ a:hover{
 .Container{
   position: relative;
   min-height: 100%;
-  padding: 40px 80px 160px 80px; /* padding-bottom: Footer height + Footer margin */
+  padding: 25px 80px 160px 80px; /* padding-bottom: Footer height + Footer margin */
   z-index: 1;
 }
 
@@ -231,28 +255,38 @@ a:hover{
   border-radius: 3px;
   border: 1px solid #D2D4D8;
   padding: 25px;
-  margin: 0 15px 15px 15px;
-}
-
-@media only screen and (max-width: 992px) {
-  .Box {margin: 0 0 15px 0 !important;}
+  margin: 15px;
 }
 
 .Box-noMargin{
-  margin: 0 0 30px 0 !important;
+  margin: 15px 0 !important;
+}
+
+.Box--firstCol{
+  margin: 15px 15px 15px 0;
+}
+
+.Box--lastCol{
+  margin: 15px 0 15px 15px;
+}
+
+@media only screen and (max-width: 992px) {
+  .Box,
+  .Box--firstCol,
+  .Box--lastCol {margin: 15px 0 15px 0 !important;}
 }
 
 .Line{
   border-bottom: 1px solid;
-  margin: 15px 0;
+  margin: 10px 0 15px 0;
 }
 
 .Line--strong{
-  border-bottom: 1px solid #959A9E;
+  border-bottom: 1px solid #D2D4D8;
 }
 
 .Line--light{
-  border-bottom: 1px solid #D2D4D8;
+  border-bottom: 1px solid #E9E9E9;
 }
 
 .Footer{
@@ -292,6 +326,11 @@ a:hover{
   padding-top: 10px;
 }
 
+@media only screen and (max-width: 992px) {
+  .Footer-text { text-align: right; padding-top: 30px;}
+  .Title-description { padding-bottom: 10px;}
+}
+
 .Tooltip-icon{
   color: #959A9E;
   padding-left: 5px;
@@ -304,7 +343,11 @@ a:hover{
   color: #E67E23;
 }
 
-.Tab>a{
+.Tab{
+  margin: 15px 0 0 0;
+}
+
+.Tab-list>a{
   padding: 25px 0 20px 0 !important;
   text-align: center;
   border: 1px solid #D2D4D8 !important;
@@ -315,17 +358,17 @@ a:hover{
   transition: background-color 0.3s ease;
 }
 
-.Tab>a .Subtitle{
+.Tab-list>a .Subtitle{
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
-.Tab>a:hover .Subtitle{
+.Tab-list>a:hover .Subtitle{
     color: #E67E23;
 }
 
-.Tab.active>a,
-.Tab.active>a:focus {
+.Tab-list.active>a,
+.Tab-list.active>a:focus {
     color: #343A41;
     cursor: default;
     background-color: #fff;
@@ -333,7 +376,7 @@ a:hover{
     border-bottom-color: transparent;
 }
 
-.Tab--last>a{
+.Tab-list--last>a{
   margin-right: 0!important;
 }
 
@@ -342,7 +385,7 @@ a:hover{
   border: 1px solid #D2D4D8;
   border-top-color: transparent;
   border-radius: 0 0 3px 3px;
-  padding: 25px;
+  padding: 25px 10px;
 }
 
 .Button{
