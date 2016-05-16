@@ -22,7 +22,6 @@
 
 <body>
     <div class="Wrapper">
-        <!--LANDING PAGE HEADER-->
         <header class="Header">
             <a class="Header-logo" href="index.html"></a>
             <div class="row">
@@ -31,10 +30,10 @@
                     <div class="input-group Search Search--moreMargin">
                         <input type="text" class="form-control Search-input">
                         <div class="input-group-btn dropdown">
-                            <button type="button" class="dropdown-toggle Search-dropdown" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
+                            <button type="button" class="dropdown-toggle Dropdown Dropdown--search" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu Search-dropdownMenu" aria-labelleddby="searchType">
+                            <ul class="dropdown-menu Dropdown-menu" aria-labelleddby="searchType">
                                 <li><a href="#" data-value="all">All</a></li>
                                 <li><a href="#" data-value="gene">Gene</a></li>
                                 <li><a href="#" data-value="variant">Variant</a></li>
@@ -81,11 +80,11 @@
 
         <footer class="Footer">
             <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 Float--right">
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 Float--right">
                     <div class="Footer-logo Footer-dbLoFLogo"></div>
                     <div class="Footer-logo Footer-broadLogo"></div>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
                     <h5 class="Footer-text">Copyright © 2016 Broad Institute. All Rights Reserved.<a href="" class="Color--blue"> Privacy Policy.</a><a href="" class="Color--blue"> Terms & Conditions</a></h5>
                 </div>
             </div>
@@ -94,11 +93,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(".dropdown-menu li a").click(function(){
-          $(this).parents(".dropdown").find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
-          $(this).parents(".dropdown").find('.dropdown-toggle').val($(this).data('value'));
-        });
-    </script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

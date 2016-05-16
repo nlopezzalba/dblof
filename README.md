@@ -1,1 +1,1 @@
-# dbLoF site mockups
+# dbLoF | LOSS OF FUNCTION VARIANTS DATABASE

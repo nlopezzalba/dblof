@@ -7,9 +7,9 @@
     <title>dbLoF | Loss-of-Function Variants Database</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="css/index.css" rel="stylesheet">
 
     <link rel='shortcut icon' href='images/dbLoF-favicon.ico' type='image/x-icon'/>
 
@@ -32,10 +32,10 @@
                     <div class="input-group Search">
                         <input type="text" class="form-control Search-input">
                         <div class="input-group-btn dropdown">
-                            <button type="button" class="dropdown-toggle Search-dropdown" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
+                            <button type="button" class="dropdown-toggle Dropdown Dropdown--search" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu Search-dropdownMenu" aria-labelleddby="searchType">
+                            <ul class="dropdown-menu Dropdown-menu" aria-labelleddby="searchType">
                                 <li><a href="#" data-value="all">All</a></li>
                                 <li><a href="#" data-value="gene">Gene</a></li>
                                 <li><a href="#" data-value="variant">Variant</a></li>
@@ -53,11 +53,11 @@
 
         <div class="Container">
             <div class="row NoMargin fsi-row-lg-level fsi-row-md-level">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 NoPadding">
+                <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 NoPadding">
                     <h2 class="Title">Gene: PCSK9</h2>
                     <h4 class="Title-description">Proprotein convertase subtilisin/kexin type 9</h4>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 Box Box-noMargin">
+                <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 Box Box-noMargin">
                     <div class="row">
                         <h4 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Subtitle">Obs/Exp
                             <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="Brief explanation of this item. Brief explanation of this item."></span>
@@ -86,9 +86,53 @@
                     </h4>
                     <hr class="Line Line--strong">
                     <div class="row NoMargin">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding References">
-                            <h5 class="Light">References:</h5>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding">
+                            <h5 class="References">References:</h5>
+                            <svg width="15" height="18" class="Display--inline">
+                                <rect x="0" y="6" width="15" height="10" fill="#343A41" />
+                            </svg>
+                            <div class="References-label">Constitutive exons</div>
+
+                            <svg width="15" height="18" class="Display--inline">
+                                <rect x="0" y="6" width="15" height="10" fill="#959A9E" />
+                            </svg>
+                            <div class="References-label">Non-Constitutive exons</div>
+
+                            <svg width="2" height="15" class="Display--inline">
+                                <rect x="0" y="0" width="2" height="15" fill="#24AFB2" />
+                            </svg>
+                            <div class="References-label">Variants</div>
+
+                            <svg width="2" height="15" class="Display--inline">
+                                <rect x="0" y="0" width="2" height="15" fill="#B5E5E5" />
+                            </svg>
+                            <div class="References-label">Flagged Variants</div>
+
+                            <svg width="8" height="12" class="Display--inline">
+                                <circle x="0" y="4" cx="4" cy="4" r="4" fill="#E67E23" />
+                            </svg>
+                            <div class="References-label">ClinVar Variants</div>
+
+                            <div class="Float--right">
+                                <h5 class="References">View:</h5>
+                                <div class="References-label View-compact active">Compact</div>
+
+                                <label class="Switch">
+                                    <input type="checkbox" class="View">
+                                    <div class="Switch-slider"></div>
+                                </label>
+                                <div class="References-label View-expanded">Expanded</div>
+                            </div>
+
                         </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding">
+                            <div class="Charts" style="border: 1px dashed #d2d4d2;">
+                                <!--REPLACE THE FOLLOWING LINE WITH PLOT AND REMOVE STYLE FROM ABOVE-->
+                                <div style="color: #d2d4d2; text-align: center; margin: 120px 0;">Place Positional Distribution Plot here</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -100,8 +144,19 @@
                     </h4>
                     <hr class="Line Line--strong">
                     <div class="row NoMargin">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding References">
-                            <h5 class="Light">References:</h5>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding ">
+                            <h5 class="References">References:</h5>
+                            <svg width="10" height="15" class="Display--inline">
+                                <rect x="0" y="0" width="10" height="15" fill="#24AFB2" />
+                            </svg>
+                            <div class="References-label">Reference 1</div>
+                            <svg width="10" height="15">
+                                <rect x="0" y="0" width="10" height="15" fill="#E67E23" />
+                            </svg>
+                            <div class="References-label">Reference 2</div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding">
+                            <div id="AgeDistribution" class="Charts"></div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +167,8 @@
                     </h4>
                     <hr class="Line Line--strong">
                     <div class="row NoMargin">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding References">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadding">
+                            <div id="PopulationDistribution" class="Charts"></div>
                         </div>
                     </div>
                 </div>
@@ -137,50 +193,98 @@
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="GeneInfo">
                             <div class="row NoMargin">
-                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <h4 class="Subtitle">About PCSK9</h4>
                                     <hr class="Line Line--strong">
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                     <p>Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open.<br>
-                                        Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="row NoMargin">
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <h4 class="Subtitle">Knockout phenotype</h4>
-                                    <hr class="Line Line--strong">
-                                    <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
-                                        One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <h4 class="Subtitle">Knockout phenotype</h4>
-                                    <hr class="Line Line--strong">
-                                    <p>One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.<br>
-                                        One compound heterozygote has been identified who lacks circulating PCSK9 and has very low LDL but no other detectable phenotype [Zhao 2006]. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL. This has spurred enthusiasm for PCSK9 inhibition as a therapeutic strategy for lowering LDL.
+                                        Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene.<br>
+                                        Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open. Main description of the gene, this will be the information to display initially when the tab is open.
                                     </p>
                                 </div>
                             </div>
                         </div>
+
                         <div role="tabpanel" class="tab-pane" id="VariantInfo">
-                            <div class="row">
+                            <div class="row NoMargin">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <h5 class="Light">Filters:</h5>
-                                    <div class="form-group">
-                                        <input id="filterAll" type="radio" class="InputRadio" name="filter">
-                                        <label for="filterAll" class="InputRadio-label">All</label>
-
-                                        <input id="filterMissenseLoF" type="radio" class="InputRadio" name="filter">
-                                        <label for="filterMissenseLoF" class="InputRadio-label">Missense + LoF</label>
-
-                                        <input id="filterLoF" type="radio" class="InputRadio" name="filter">
-                                        <label for="filterLoF" class="InputRadio-label">LoF</label>
+                                    <h5 class="References">Filters:</h5>
+                                    <div class="input-group-btn dropdown Display--inline">
+                                        <button type="button" class="dropdown-toggle Dropdown Dropdown--filter" id="searchType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu Dropdown-menu Dropdown-menu--filter" aria-labelleddby="searchType">
+                                            <li><a href="#" data-value="all">All</a></li>
+                                            <li><a href="#" data-value="gene">Missense + LoF</a></li>
+                                            <li><a href="#" data-value="variant">LoF</a></li>
+                                        </ul>
                                     </div>
-                                    <a href="" class="Button Button--orange Float--right">Export table to CSV</a>
+
+                                    <div class="form-group References">
+                                        <input id="includeNonPassVariants" type="checkbox" checked>
+                                        <label for="includeNonPassVariants" class="InputCheckbox-label">Include filtered <span class="Italic">(non-PASS)</span> variants</label>
+
+                                        <input id="invertHighlightRareVariants" type="checkbox">
+                                        <label for="invertHighlightRareVariants" class="InputCheckbox-label">Invert <span class="Italic">(highlight rare variants)</span></label>
+
+                                        <a href="" class="Button Button--orange Float--right">Export table to CSV</a>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="row NoMargin">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <table class="table Table" id="variant_table">
+                                        <thead>
+                                            <th class="Table-th">Variant</th>
+                                            <th class="Table-th">Chrom</th>
+                                            <th class="Table-th">Position</th>
+                                            <th class="Table-th">Consequence</th>
+                                            <th class="Table-th">Filter</th>
+                                            <th class="Table-th">Annotation</th>
+                                            <th class="Table-th">Flags</th>
+                                            <th class="Table-th">Allele Count</th>
+                                            <th class="Table-th">Allele Number</th>
+                                            <th class="Table-th">Nº of Homozygotes</th>
+                                            <th class="Table-th">Allele Frequency</th>
+                                        </thead>
+                                        <tbody>
+                                            <!--FILLS DYNAMICALLY-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row NoMargin text-center">
+                                <ul class="pagination Paginator">
+                                    <li>
+                                        <a href="#" aria-label="First">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&#x008B;</span>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&#x009B;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Last">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,37 +293,19 @@
 
         <footer class="Footer">
             <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 Float--right">
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 Float--right">
                     <div class="Footer-logo Footer-dbLoFLogo"></div>
                     <div class="Footer-logo Footer-broadLogo"></div>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-5 col-xs-12">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
                     <h5 class="Footer-text">Copyright © 2016 Broad Institute. All Rights Reserved.<a href="" class="Color--blue"> Privacy Policy.</a><a href="" class="Color--blue"> Terms & Conditions</a></h5>
                 </div>
             </div>
         </footer>
     </div>
-
-
-    <!-- <span class="glyphicon glyphicon-question-sign Tooltip-icon" data-toggle="tooltip" data-placement="top" data-html="true" title="<span class='Bold'>Variant:</span> <a href='' class='Color--blue'>lalala</a><br><span class='Bold'>Consequence:</span> lalala<br>"></span> -->
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-
-    $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
-    $(".dropdown-menu li a").click(function(){
-        $(this).parents(".dropdown").find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
-        $(this).parents(".dropdown").find('.dropdown-toggle').val($(this).data('value'));
-    });
-    </script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

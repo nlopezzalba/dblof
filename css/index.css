@@ -16,11 +16,11 @@ body {
 }
 
 @media only screen and (min-width: 1380px) {
-  html {font-size: 20px;}
+  html {font-size: 16px;}
 }
 
 @media only screen and (max-width: 1280px) {
-  html {font-size: 16px;}
+  html {font-size: 15px;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -124,51 +124,6 @@ a:hover{
   box-shadow: none;
 }
 
-.Search-dropdown{
-  position: relative;
-  border-radius: 0;
-  border: none;
-  border-left: 1px solid #D2D4D8 !important;
-  height: 40px;
-  width: 100px;
-  color: #343A41 !important;
-  text-align: left;
-  font-size: 1rem;
-  padding-left: 12px;
-}
-
-.Search-dropdown,
-.Search-dropdown:focus,
-.Search-dropdown:hover{
-    background-color: #ffffff !important;
-}
-
-.Search-dropdown span{
-  position: absolute;
-  right: 15px;
-  top: 18px;
-}
-
-.Search-dropdownMenu{
-  border-radius: 0;
-  padding: 0 !important;
-  min-width: 100px;
-}
-
-.Search-dropdownMenu li a{
-  padding: 7px 15px;
-}
-
-.Search-dropdownMenu li a:hover{
-  background-color: #CEF4F3;
-}
-
-.Search-dropdown:focus{
-  border: none;
-  border-left: 1px solid #D2D4D8 !important;
-  background-color: #ffffff;
-}
-
 .Search-button{
   background-color: #24AFB2;
   color: #ffffff !important;
@@ -196,6 +151,99 @@ a:hover{
 
 .Search-examples a{
   transition: color 0.5s ease;
+}
+
+.Dropdown{
+  position: relative;
+  border-radius: 0;
+  border: 1px solid #E9E9E9 !important;
+  color: #343A41 !important;
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 12px;
+}
+
+.Dropdown,
+.Dropdown:focus,
+.Dropdown:hover{
+    background-color: #ffffff !important;
+}
+
+.Dropdown--search{
+  border: none;
+  border-left: 1px solid #E9E9E9 !important;
+  min-width: 100px !important;
+  height: 40px;
+}
+
+.Dropdown--search:focus{
+  border: none;
+  border-left: 1px solid #D2D4D8 !important;
+}
+
+.Dropdown--filter{
+  height: 35px;
+}
+
+.Dropdown-menu{
+  border-radius: 0;
+  padding: 0 !important;
+  min-width: 100px;
+  top: inherit !important;
+}
+
+.Dropdown-menu li a{
+  padding: 7px 15px;
+}
+
+.Dropdown-menu li a:hover{
+  background-color: ##CEF4F3;
+}
+
+.Dropdown-menu:focus{
+  border: none;
+  border-left: 1px solid #D2D4D8 !important;
+  background-color: #ffffff;
+}
+
+.Dropdown--filter,
+.Dropdown-menu--filter{
+  min-width: 140px !important;
+  margin: 0 15px;
+}
+
+.Dropdown span{
+  position: absolute;
+  right: 15px;
+  top: 45%;
+}
+
+.InputRadio-label{
+  color: #9e9e9e;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.InputRadio-labelExtraMargin,
+.InputCheckbox-labelExtraMargin{
+  margin: 12px 0 0 0;
+}
+
+.InputRadio-extraMargin{
+  margin: 40px 0;
+}
+
+.InputCheckbox-label{
+  color: #343A41;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: text;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  padding: 0 25px!important;
 }
 
 .MainTitle{
@@ -254,7 +302,7 @@ a:hover{
   background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #D2D4D8;
-  padding: 25px;
+  padding: 25px 25px 20px 25px;
   margin: 15px;
 }
 
@@ -287,6 +335,31 @@ a:hover{
 
 .Line--light{
   border-bottom: 1px solid #E9E9E9;
+}
+
+.Paginator{
+  margin: 15px auto 0 auto;
+}
+
+.Paginator>li>a,
+.Paginator>li>span {
+  color: #343A41;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 0 !important;
+}
+
+.Paginator>li.active>a{
+  background-color: #fff !important;
+  color: #24AFB2 !important;
+  border: 1px solid #24AFB2 !important;
+  font-weight: 600;
+}
+
+.Paginator>li:hover>a,
+.Paginator>li.active:hover>a{
+  background-color: #CEF4F3;
+  border: 1px solid #CEF4F3;
 }
 
 .Footer{
@@ -340,7 +413,7 @@ a:hover{
 }
 
 .Tooltip-icon:hover{
-  color: #E67E23;
+  color: #24AFB2;
 }
 
 .Tab{
@@ -364,7 +437,7 @@ a:hover{
 }
 
 .Tab-list>a:hover .Subtitle{
-    color: #E67E23;
+    color: #24AFB2;
 }
 
 .Tab-list.active>a,
@@ -376,7 +449,7 @@ a:hover{
     border-bottom-color: transparent;
 }
 
-.Tab-list--last>a{
+.Tab--last>a{
   margin-right: 0!important;
 }
 
@@ -390,7 +463,7 @@ a:hover{
 
 .Button{
   font-weight: 700;
-  padding: 10px 20px 10px 20px;
+  padding: 7px 20px 6px 20px;
   border: 1px solid;
 }
 
@@ -406,35 +479,139 @@ a:hover{
   background-color: #ffffff;
 }
 
-
-.InputRadio-label{
-  color: #9e9e9e;
-  font-size: 1rem;
+.References{
   font-weight: 300;
+  display: inline;
+  vertical-align: 20%;
+  padding-right: 15px;
 }
 
-.InputRadio-labelExtraMargin,
-.InputCheckbox-labelExtraMargin{
-  margin: 12px 0 0 0;
+.References-label{
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline;
+  vertical-align: 10%;
+  padding: 0 15px 0 5px;
 }
 
-.InputRadio-extraMargin{
-  margin: 40px 0;
+.Link{
+  color: #24AFB2;
+  transition: color 0.3s ease;
 }
 
-.InputCheckbox-label{
-  color: #9e9e9e;
+.Link:hover{
+  color: #E67E23;
+}
+
+.ImageExample{
+  width: 145px;
+  float: left;
+  display: inline;
+  margin-right: 10px;
+}
+
+.Col--topMargin{
+  margin-top: 30px;
+}
+
+.Table{
+  margin: 20px 0 0 0;
+}
+
+.Table-th{
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #343A41;
+  border-top: 0!important;
+  border-bottom: 1px solid #D2D4D8;
+  padding-left: 0 !important;
+}
+
+.Table-td{
+  font-size: 0.9rem;
+  color: #343A41;
+  border-top: 0!important;
+  border-bottom: 1px solid #E9E9E9;
+  padding-left: 0 !important;
+}
+
+.Table-td a{
+  color: #24AFB2;
+  font-weight: 600;
+}
+
+.Table-td a:hover{
+  color: #E67E23;
+}
+
+.Charts{
+  margin-top: 15px;
+}
+
+/* The switch - the box around the slider */
+.Switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-bottom: 0!important;
+}
+
+.Switch input {
+  display:none;
+}
+
+.Switch-slider {
   position: absolute;
-  left: 23px;
-  font-size: 1rem;
-  font-weight: 300;
-  cursor: text;
-  -webkit-transition: 0.2s ease-out;
-  -moz-transition: 0.2s ease-out;
-  -o-transition: 0.2s ease-out;
-  -ms-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #D2D4D8;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px;
 }
+
+.Switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #E67E23;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.View-expanded,
+.View-compact{
+  transition: color 0.3s ease;
+}
+
+.View-expanded.active,
+.View-compact.active{
+  color: #E67E23;
+}
+
+input:checked + .Switch-slider {
+  background-color: #D2D4D8;
+}
+
+input:focus + .Switch-slider {
+  box-shadow: 0 0 1px #D2D4D8;
+}
+
+input:checked + .Switch-slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+
 
 /******GENERAL CLASSES*/
 
@@ -544,6 +721,10 @@ a:hover{
 
 .Position--relative{
   position: relative;
+}
+
+.Display--inline{
+  display: inline;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

@@ -1,0 +1,69 @@
+{
+  "variants":[
+    {
+      "variant": "1:55505475 C / T",
+      "chomosome": "1",
+      "position": 55505475,
+      "consequence": "---",
+      "filter": "PASS",
+      "annotation": "5’ UTR",
+      "flags": "---",
+      "allele_count": 1,
+      "allele_number": 30642,
+      "n_homozygotes": 0,
+      "allele_frequency": 0.00003263
+    },
+    {
+      "variant": "1:55505477 C / T",
+      "chomosome": "1",
+      "position": "55505477",
+      "consequence": "---",
+      "filter": "PASS",
+      "annotation": "5’ UTR",
+      "flags": "---",
+      "allele_count": "1",
+      "allele_number": "30502",
+      "n_homozygotes": "0",
+      "allele_frequency": 0.00003278
+    },
+    {
+      "variant": "1:55505485 C / T",
+      "chomosome": "1",
+      "position": "55505485",
+      "consequence": "---",
+      "filter": "PASS",
+      "annotation": "5’ UTR",
+      "flags": "---",
+      "allele_count": "139",
+      "allele_number": "29832",
+      "n_homozygotes": "0",
+      "allele_frequency": 0.004659
+    },
+    {
+      "variant": "1:55505520 C / T",
+      "chomosome": "1",
+      "position": "55505520",
+      "consequence": "p.Val4Ile",
+      "filter": "PASS",
+      "annotation": "missense",
+      "flags": "---",
+      "allele_count": "7",
+      "allele_number": "26168",
+      "n_homozygotes": "0",
+      "allele_frequency": 0.0002675
+    },
+    {
+      "variant": "1:55505475 C / T",
+      "chomosome": "1",
+      "position": "55505475",
+      "consequence": "---",
+      "filter": "PASS",
+      "annotation": "5’ UTR",
+      "flags": "---",
+      "allele_count": "1",
+      "allele_number": "30642",
+      "n_homozygotes": "0",
+      "allele_frequency": 0.00003263
+    }
+  ]
+}
